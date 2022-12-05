@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>App</title>
+    <style>
+        #phoneForm {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            width: 350px;
+            height: 500px;
+            background-color: grey;
+            position: absolute;
+            top:0;  
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border: 2px lightgrey solid;
+            border-radius: 30px;
+            margin: auto;
+            color: whitesmoke;
+            text-align: center;
+        }
+        body {
+            background-color: darkgrey;;
+        }
+        input  {
+            margin-bottom: 20px;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <div id="phoneForm">
+    <form method="post">
+        <h2> Telefon Adatai</h2>
+    <label for="name" > Gyártó <br>
+        <input type="text" name="name">
+    </label> <br>
+
+    <label for="type" > Típus <br>
+        <input type="text" name="type">
+    </label> <br>
+
+    <label for="phoneColor" > Szin <br>
+        <input type="color" name="phoneColor">
+    </label> <br>
+
+    <label for="price" > Ár(ft) <br>
+        <input type="number" name="price"> 
+    </label> <br>
+
+    <label for="batteryLevel" > Akkumlátor állapota(%) <br>
+        <input type="number"max="100" name="batteryLevel" > 
+    </label> <br>
+    <select name="condition" id="condition" > 
+        <option value="Új">Új</option>
+        <option value="Újszerű">Újszerű</option>
+        <option value="karcos">karcos</option>
+    </select><br>
+    <button style="margin-top: 20px; width: 100px; height: 30px;" type="submit">Küldés</button>
+    </form>
+</div>
+  </body>
+</html>

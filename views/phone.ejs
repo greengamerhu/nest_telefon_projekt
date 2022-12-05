@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #phoneDisplay {
+            border: 5px <%= phoneColor  %>  solid ;
+            border-radius: 30px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            width: 250px;
+            height: 600px;
+            background-color: lightcyan;
+            margin: 30px;
+        }
+
+        progress {
+        /* style rules */
+        background-color: white !important;;
+        /* chrome, edge, opera, safari apply "webkit" stylesheet for progress bar*/
+        -webkit-appearance: none;
+        appearance: none;
+        accent-color: red; /* sep 2021 - mar 2022 */
+        height: 13px;
+        width: 30px;
+        border: 2px  black solid ;
+        border-radius: 5px;
+        }
+        progress::-webkit-progress-bar {
+        /* style rules background in chrome, edge, opera */
+        height: 7px;
+        background-color: whitesmoke;
+
+        border-radius: 5px;
+        }
+        progress::-webkit-progress-value {
+        /* style rules chrome edge opera value bar colour */
+        background-color: green;
+        height: 10px;
+        border-radius: 5px;
+        }
+        progress::-moz-progress-bar {
+        /* style rules ff equivalent to ::-webkit-progress-value */
+        background-color: green;
+        }
+    #phoneTop {
+        align-self: start;
+        height: 30px;
+    }
+    #phoneBody {
+        align-items: center;
+        text-align: center;
+        align-self: center;
+        position: absolute ;
+        
+    }
+    </style>
+</head>
+<body style="background-color:darkslategrey ;">
+    <div id="phoneDisplay">
+        <div id="phoneTop">
+            <progress  value="<%= batteryLevel  %>" max="100" >   </progress>
+            <%= batteryLevel  %>%
+        </div>
+        <div id="phoneBody">
+            <h3><%= name  %> </h3>
+            <h4><%= type  %> </h4>
+            <p><%= price  %> FT</p>
+            <p><%= condition  %> </p>
+
+        </div>
+    </div>
+</body>
+</html>
